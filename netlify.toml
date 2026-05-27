@@ -1,0 +1,26 @@
+<!-- netlify.toml -->
+[build]
+  command = "echo 'Build complete'"
+  functions = "netlify/functions"
+  publish = "."
+
+[dev]
+  command = "echo 'Development mode'"
+  functions = "netlify/functions"
+  port = 8888
+
+[[redirects]]
+  from = "/downloads/ebook"
+  to = "/.netlify/functions/download-ebook"
+  status = 200
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    Cache-Control = "private, max-age=86400"
+    Content-Disposition = "attachment"

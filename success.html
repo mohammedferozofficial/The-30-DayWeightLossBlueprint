@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download your 30-Day Weight Loss Blueprint ebook">
+    <title>Download Your Blueprint - Success!</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #00D084;
+            --dark: #0F1419;
+            --dark-card: #1A1F26;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A8B2C1;
+            --text-muted: #6B7280;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .success-box {
+            background: var(--dark-card);
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+            padding: 48px 40px;
+            text-align: center;
+        }
+
+        .success-icon {
+            font-size: 80px;
+            margin-bottom: 32px;
+            animation: successPulse 0.6s ease-out;
+        }
+
+        @keyframes successPulse {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) rotate(-10deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(5deg);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0);
+            }
+        }
+
+        h1 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            color: var(--primary);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .info-box {
+            background: rgba(0, 208, 132, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: left;
+        }
+
+        .info-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            color: var(--text-primary);
+            word-break: break-all;
+        }
+
+        .download-section {
+            margin: 40px 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 20px 40px;
+            background: var(--primary);
+            color: var(--dark);
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 16px rgba(0, 208, 132, 0.3);
+            margin-bottom: 16px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 208, 132, 0.4);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .download-btn.loading {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--dark);
+            animation: spin 0.8s linear infinite;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .next-steps {
+            background: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: left;
+            margin: 32px 0;
+        }
+
+        .next-steps h3 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        .next-steps ol {
+            margin-left: 24px;
+            color: var(--text-secondary);
+        }
+
+        .next-steps li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .email-section {
+            background: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 32px 0;
+        }
+
+        .email-section p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .footer-link {
+            margin-top: 32px;
+        }
+
+        .footer-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-link a:hover {
+            text-decoration: underline;
+        }
+
+        .error-box {
+            display: none;
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid #EF4444;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .error-box.show {
+            display: block;
+        }
+
+        .error-box h3 {
+            color: #EF4444;
+            margin-bottom: 12px;
+        }
+
+        .error-box p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        @media (max-width: 640px) {
+            .success-box {
+                padding: 32px 24px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .download-btn {
+                font-size: 16px;
+                padding: 16px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-box">
+            <div class="success-icon">✓</div>
+            
+            <h1>Payment Successful!</h1>
+            <p class="subtitle">Your 30-Day Weight Loss Blueprint is ready to download</p>
+
+            <div class="info-box" id="orderInfo">
+                <div class="info-label">Order ID</div>
+                <div class="info-value" id="orderId">Loading...</div>
+            </div>
+
+            <div class="download-section">
+                <button class="download-btn" id="downloadBtn" onclick="downloadEbook()">
+                    ⬇️ Download Your Ebook Now
+                </button>
+                <p style="color: var(--text-muted); font-size: 14px;">
+                    PDF format • Works on all devices
+                </p>
+            </div>
+
+            <div class="error-box" id="errorBox">
+                <h3>⚠️ Download Error</h3>
+                <p id="errorMessage"></p>
+            </div>
+
+            <div class="next-steps">
+                <h3>Next Steps:</h3>
+                <ol>
+                    <li>Click the download button above to get your ebook</li>
+                    <li>Open the PDF file on your computer or phone</li>
+                    <li>Save it somewhere easy to find</li>
+                    <li>Start reading and begin your 30-day journey!</li>
+                </ol>
+            </div>
+
+            <div class="email-section">
+                <p><strong>Check your email:</strong> We've sent a confirmation email with your download link. If you don't see it, check your spam folder.</p>
+            </div>
+
+            <div class="footer-link">
+                <p><a href="/">← Back to Home</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get order ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('order');
+
+        // Display order ID
+        document.getElementById('orderId').textContent = orderId || 'Pending...';
+
+        // Download ebook function
+        async function downloadEbook() {
+            const btn = document.getElementById('downloadBtn');
+            const errorBox = document.getElementById('errorBox');
+            
+            // Show loading state
+            btn.classList.add('loading');
+            btn.disabled = true;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="loading-spinner"></span>Preparing download...';
+            
+            try {
+                // Call backend to get secure download link
+                const response = await fetch('/.netlify/functions/get-ebook-download', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ orderId: orderId })
+                });
+
+                const data = await response.json();
+
+                if (data.success && data.downloadUrl) {
+                    // Trigger download
+                    const link = document.createElement('a');
+                    link.href = data.downloadUrl;
+                    link.download = '30-Day-Weight-Loss-Blueprint.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+                    // Show success message
+                    btn.innerHTML = '✓ Download Complete!';
+                    btn.style.background = '#10B981';
+                } else {
+                    throw new Error(data.message || 'Download failed');
+                }
+            } catch (error) {
+                console.error('Download error:', error);
+                errorBox.classList.add('show');
+                document.getElementById('errorMessage').textContent = 
+                    error.message || 'Unable to download ebook. Please try again.';
+                
+                btn.classList.remove('loading');
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }
+        }
+
+        // Auto-trigger download on page load (optional)
+        // Uncomment the line below if you want automatic download
+        // downloadEbook();
+    </script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Payment Cancelled">
+    <title>Payment Cancelled - The 30-Day Weight Loss Blueprint</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #00D084;
+            --dark: #0F1419;
+            --dark-card: #1A1F26;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A8B2C1;
+            --text-muted: #6B7280;
+            --error: #EF4444;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .cancel-box {
+            background: var(--dark-card);
+            border: 2px solid var(--error);
+            border-radius: 16px;
+            padding: 48px 40px;
+            text-align: center;
+        }
+
+        .cancel-icon {
+            font-size: 80px;
+            margin-bottom: 32px;
+            animation: cancelShake 0.6s ease-out;
+        }
+
+        @keyframes cancelShake {
+            0%, 100% { transform: rotate(0); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        h1 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            color: var(--error);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .reason-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--error);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: left;
+        }
+
+        .reason-box h3 {
+            color: var(--error);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .reason-list {
+            list-style: none;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        .reason-list li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .reason-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--error);
+        }
+
+        .action-buttons {
+            margin: 40px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 16px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--dark);
+            box-shadow: 0 4px 16px rgba(0, 208, 132, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 208, 132, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 208, 132, 0.1);
+        }
+
+        .faq-section {
+            background: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: left;
+        }
+
+        .faq-section h3 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        .faq-item {
+            margin-bottom: 16px;
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .faq-a {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .help-section {
+            background: rgba(0, 208, 132, 0.05);
+            border: 1px solid var(--primary);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: left;
+        }
+
+        .help-section h3 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .help-section p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .help-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .help-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer-link {
+            margin-top: 32px;
+        }
+
+        .footer-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .cancel-box {
+                padding: 32px 24px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                font-size: 15px;
+                padding: 14px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cancel-box">
+            <div class="cancel-icon">✕</div>
+            
+            <h1>Payment Cancelled</h1>
+            <p class="subtitle">We didn't receive your payment</p>
+
+            <div class="reason-box">
+                <h3>Common Reasons:</h3>
+                <ul class="reason-list">
+                    <li>You closed the PayPal checkout window</li>
+                    <li>Payment method was declined</li>
+                    <li>You chose not to complete the purchase</li>
+                    <li>Technical issue during checkout</li>
+                </ul>
+            </div>
+
+            <div class="action-buttons">
+                <a href="/#pricing" class="btn btn-primary">Try Again</a>
+                <a href="/" class="btn btn-secondary">Back to Home</a>
+            </div>
+
+            <div class="faq-section">
+                <h3>Common Questions</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Will I be charged if I leave?</div>
+                    <div class="faq-a">No. You won't be charged unless you complete the PayPal checkout. Closing the window doesn't process any payment.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">Can I try a different payment method?</div>
+                    <div class="faq-a">Yes! PayPal accepts credit cards, debit cards, PayPal balance, and bank transfers. You can select a different method when you retry.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">What if my payment was declined?</div>
+                    <div class="faq-a">Contact your bank or card issuer to check if there's an issue. Then try again with a different payment method.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">Is the ebook still $9.99?</div>
+                    <div class="faq-a">Yes! The price hasn't changed. Go back and try checkout again.</div>
+                </div>
+            </div>
+
+            <div class="help-section">
+                <h3>Need Help?</h3>
+                <p>If you continue to have issues with payment, please <a href="/contact.html" class="help-link">contact our support team</a>. We're here to help!</p>
+            </div>
+
+            <div class="footer-link">
+                <p><a href="/">← Back to Home</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

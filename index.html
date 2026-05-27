@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7RG5RX10PH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7RG5RX10PH');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple 30-day plan for real weight loss. Science-backed strategies and beginner-friendly guidance anyone can follow.">
+    <title>The 30-Day Weight Loss Blueprint - Lose Weight Without Starving Yourself</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID_HERE"></script>
+    
+    <style>
+        :root {
+            --primary: #00D084;
+            --primary-dark: #00A86B;
+            --dark: #0F1419;
+            --dark-card: #1A1F26;
+            --dark-lighter: #252B35;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A8B2C1;
+            --text-muted: #6B7280;
+            --accent: #00F5A0;
+            --border: rgba(255, 255, 255, 0.08);
+            --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-sm {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 20, 25, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav.scrolled {
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Manrope', sans-serif;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-cta {
+            padding: 10px 24px;
+            background: var(--primary);
+            border: none;
+            border-radius: 8px;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(180deg, var(--dark) 0%, var(--dark-card) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 208, 132, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-text h1 .highlight {
+            color: var(--primary);
+        }
+
+        .hero-text .subheadline {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--primary);
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 16px rgba(0, 208, 132, 0.25);
+        }
+
+        .cta-primary:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 208, 132, 0.35);
+        }
+
+        .cta-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .trust-badges {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .trust-badge::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .book-mockup {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+        }
+
+        .book-mockup img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+        }
+
+        .social-proof-text {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 15px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 100px 0;
+            background: var(--dark-card);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(0, 208, 132, 0.1);
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section-title {
+            font-family: 'Manrope', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .problem-solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .problem-box,
+        .solution-box {
+            background: var(--dark);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .problem-box h3,
+        .solution-box h3 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .problem-box h3 {
+            color: #EF4444;
+        }
+
+        .solution-box h3 {
+            color: var(--primary);
+        }
+
+        .problem-list,
+        .solution-list {
+            list-style: none;
+        }
+
+        .problem-list li,
+        .solution-list li {
+            padding: 12px 0;
+            padding-left: 32px;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        .problem-list li::before {
+            content: '✕';
+            position: absolute;
+            left: 0;
+            color: #EF4444;
+            font-weight: 700;
+        }
+
+        .solution-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* What's Inside Section */
+        .whats-inside {
+            padding: 100px 0;
+            background: var(--dark);
+        }
+
+        .inside-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .inside-card {
+            background: var(--dark-card);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .inside-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .inside-card .icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .inside-card h4 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .inside-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Creator Story Section */
+        .creator-story {
+            padding: 100px 0;
+            background: var(--dark-card);
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .story-box {
+            background: var(--dark);
+            padding: 48px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .story-box h3 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--primary);
+        }
+
+        .story-box p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .story-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .author-signature {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 16px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--dark);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .testimonial-card {
+            background: var(--dark-card);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .stars {
+            color: #FFA500;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background: var(--dark-card);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .faq-item {
+            background: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 24px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-family: 'Manrope', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 24px;
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: var(--dark);
+        }
+
+        .pricing-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .pricing-card {
+            background: var(--dark-card);
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+        }
+
+        .price-tag {
+            font-family: 'Manrope', sans-serif;
+            font-size: 64px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .price-description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            padding-left: 32px;
+            position: relative;
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        #paypal-button-container {
+            margin: 32px 0;
+        }
+
+        .cta-large {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: var(--primary);
+            color: var(--dark);
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 16px rgba(0, 208, 132, 0.3);
+        }
+
+        .cta-large:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 208, 132, 0.4);
+        }
+
+        .cta-large:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .secure-badge::before {
+            content: '🔒';
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-card);
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .trust-badges {
+                justify-content: center;
+            }
+
+            .problem-solution-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .inside-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-box {
+                padding: 32px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-text .subheadline {
+                font-size: 18px;
+            }
+
+            .trust-badges {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-subtitle {
+                font-size: 16px;
+            }
+
+            .problem-box,
+            .solution-box {
+                padding: 24px;
+            }
+
+            .inside-card {
+                padding: 24px;
+            }
+
+            .story-box {
+                padding: 24px;
+            }
+
+            .story-box h3 {
+                font-size: 24px;
+            }
+
+            .story-box p {
+                font-size: 16px;
+            }
+
+            .price-tag {
+                font-size: 48px;
+            }
+
+            .pricing-card {
+                padding: 32px 24px;
+            }
+
+            .faq-question {
+                font-size: 16px;
+                padding: 20px;
+            }
+
+            .testimonial-card {
+                padding: 24px;
+            }
+
+            .nav-logo {
+                font-size: 16px;
+            }
+
+            .nav-cta {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <div class="nav-logo">Weight Loss Blueprint</div>
+            <button class="nav-cta" onclick="scrollToPrice()">Get Started</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Lose Weight Without <span class="highlight">Starving Yourself</span></h1>
+                <p class="subheadline">Science-backed strategies, beginner-friendly meal guidance, and simple fat-loss habits anyone can follow.</p>
+                <button class="cta-primary" onclick="scrollToPrice()">Download The Blueprint Now</button>
+                
+                <div class="trust-badges">
+                    <div class="trust-badge">Secure PayPal Checkout</div>
+                    <div class="trust-badge">Instant Digital Download</div>
+                    <div class="trust-badge">Lifetime Access</div>
+                    <div class="trust-badge">Beginner Friendly</div>
+                </div>
+
+                <p class="social-proof-text">Loved by beginners starting their fitness journey</p>
+            </div>
+
+            <div class="hero-image">
+                <div class="book-mockup">
+                    <img src="cover.jpg.jpeg" alt="The 30-Day Weight Loss Blueprint" loading="eager" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem → Solution Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Real Problem</div>
+                <h2 class="section-title">Why Most Diets Fail</h2>
+            </div>
+
+            <div class="problem-solution-grid">
+                <div class="problem-box">
+                    <h3>Traditional Diets Are:</h3>
+                    <ul class="problem-list">
+                        <li>Too restrictive and unrealistic</li>
+                        <li>Hard to maintain long-term</li>
+                        <li>Full of confusing fitness advice</li>
+                        <li>Require expensive gym memberships</li>
+                        <li>Leave you feeling constantly hungry</li>
+                    </ul>
+                </div>
+
+                <div class="solution-box">
+                    <h3>How This Blueprint Helps:</h3>
+                    <ul class="solution-list">
+                        <li>Easy-to-follow fat loss system</li>
+                        <li>Beginner-friendly meal structure</li>
+                        <li>Sustainable habits that actually stick</li>
+                        <li>Simple home workouts included</li>
+                        <li>Easy calorie understanding</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside Section -->
+    <section class="whats-inside">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Inside The Blueprint</div>
+                <h2 class="section-title">What You'll Get</h2>
+                <p class="section-subtitle">Everything you need to start your weight loss journey</p>
+            </div>
+
+            <div class="inside-grid">
+                <div class="inside-card">
+                    <div class="icon">📅</div>
+                    <h4>30-Day Weight Loss Plan</h4>
+                    <p>A complete day-by-day guide to help you stay on track</p>
+                </div>
+
+                <div class="inside-card">
+                    <div class="icon">💪</div>
+                    <h4>Beginner Workout Guide</h4>
+                    <p>Simple home exercises that require zero equipment</p>
+                </div>
+
+                <div class="inside-card">
+                    <div class="icon">🧠</div>
+                    <h4>Fat Loss Basics Explained</h4>
+                    <p>Understand how weight loss actually works</p>
+                </div>
+
+                <div class="inside-card">
+                    <div class="icon">🍽️</div>
+                    <h4>Meal Planning Tips</h4>
+                    <p>Learn how to create balanced, satisfying meals</p>
+                </div>
+
+                <div class="inside-card">
+                    <div class="icon">🛒</div>
+                    <h4>Grocery Guide</h4>
+                    <p>Know exactly what to buy at the supermarket</p>
+                </div>
+
+                <div class="inside-card">
+                    <div class="icon">✅</div>
+                    <h4>Daily Habit Tracker</h4>
+                    <p>Build consistency with simple tracking tools</p>
+                </div>
+
+                <div class="inside-card">
+                    <div class="icon">🎯</div>
+                    <h4>Motivation System</h4>
+                    <p>Stay motivated throughout your entire journey</p>
+                </div>
+
+                <div class="inside-card">
+                    <div class="icon">♾️</div>
+                    <h4>Sustainable Methods</h4>
+                    <p>Create lasting change, not quick fixes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creator Story Section -->
+    <section class="creator-story">
+        <div class="story-content">
+            <div class="story-box">
+                <h3>Why I Created This Blueprint</h3>
+                <p>After seeing how confusing weight loss advice online had become, I wanted to create a simple beginner-friendly system that focuses on sustainable habits instead of extreme dieting.</p>
+                <p>Too many people were getting lost in complicated meal plans, expensive supplements, and unrealistic workout routines. I realized what people really needed was a straightforward approach that actually works in real life.</p>
+                <p>This blueprint is designed for real people with busy lifestyles who want real results without the confusion.</p>
+                <div class="author-signature">— Your guide to sustainable weight loss</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Real Feedback</div>
+                <h2 class="section-title">What Readers Are Saying</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"This helped me finally understand calorie deficits in a simple way."</p>
+                    <p class="testimonial-author">— Sarah M.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The meal structure made healthy eating much easier."</p>
+                    <p class="testimonial-author">— Emily R.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Very beginner-friendly and practical. I actually stuck with it."</p>
+                    <p class="testimonial-author">— Jessica L.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The workouts are perfect for busy people. No gym needed."</p>
+                    <p class="testimonial-author">— David P.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Simple, realistic, and easy to follow. Exactly what I needed."</p>
+                    <p class="testimonial-author">— Lisa K.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The grocery guide saved me so much time and confusion."</p>
+                    <p class="testimonial-author">— Michael T.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="faq-container">
+            <div class="section-header">
+                <div class="section-label">Questions</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is this beginner friendly?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes! This blueprint is specifically designed for beginners. You don't need any prior fitness knowledge or experience. Everything is explained in simple, easy-to-understand language.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do I need a gym membership?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        No gym required! All the workouts can be done at home with zero equipment. Perfect for busy people who want to exercise on their own schedule.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is this a physical book?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        No, this is a digital ebook (PDF format). You'll receive instant access after purchase and can download it immediately to any device.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I receive the ebook?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        After completing your PayPal payment, you'll be redirected to a download page where you can instantly access your ebook. You'll also receive an email with the download link.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I read it on my phone?
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Absolutely! The ebook is a PDF that works on all devices – phones, tablets, computers, and e-readers. Read it wherever is most convenient for you.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <div class="section-header">
+                <div class="section-label">Simple Pricing</div>
+                <h2 class="section-title">Start Your Journey Today</h2>
+            </div>
+
+            <div class="pricing-card">
+                <div class="price-tag">$9.99</div>
+                <p class="price-description">One-time payment • No subscriptions</p>
+
+                <ul class="pricing-features">
+                    <li>Complete 30-day weight loss plan</li>
+                    <li>Beginner-friendly workout guide</li>
+                    <li>Meal planning & grocery lists</li>
+                    <li>Daily habit tracking system</li>
+                    <li>Instant digital access</li>
+                    <li>Lifetime access to updates</li>
+                </ul>
+
+                <div id="paypal-button-container"></div>
+
+                <div class="secure-badge">Secure checkout with PayPal</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a>
+                <a href="/terms-of-service.html" class="footer-link">Terms of Service</a>
+                <a href="/contact.html" class="footer-link">Contact</a>
+            </div>
+            <p class="copyright">© 2024 The 30-Day Weight Loss Blueprint. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll to pricing
+        function scrollToPrice() {
+            document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-question').classList.remove('active');
+                });
+                
+                // Toggle current FAQ
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    question.classList.add('active');
+                }
+            });
+        });
+
+        // PayPal Checkout Integration
+        paypal.Buttons({
+            style: {
+                layout: 'vertical',
+                color: 'gold',
+                shape: 'pill',
+                label: 'checkout',
+                tagline: false
+            },
+            
+            // This function sets up the details of the transaction when the customer clicks on the PayPal button
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            currency_code: 'USD',
+                            value: '9.99'
+                        },
+                        description: 'The 30-Day Weight Loss Blueprint - Digital Ebook'
+                    }]
+                });
+            },
+            
+            // This function is called when the customer approves the payment
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(orderData) {
+                    // Call backend to verify payment
+                    verifyPayment(orderData.id);
+                });
+            },
+            
+            // This function handles any errors
+            onError: function(err) {
+                console.error('Payment error:', err);
+                alert('An error occurred during payment. Please try again.');
+            }
+        }).render('#paypal-button-container');
+
+        // Verify payment with backend
+        async function verifyPayment(orderId) {
+            try {
+                const response = await fetch('/.netlify/functions/verify-payment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ orderId: orderId })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Redirect to success page
+                    window.location.href = `/success.html?order=${orderId}`;
+                } else {
+                    // Redirect to cancel page
+                    window.location.href = '/cancel.html';
+                }
+            } catch (error) {
+                console.error('Verification error:', error);
+                window.location.href = '/cancel.html';
+            }
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe section headers
+        document.querySelectorAll('.section-header').forEach(el => {
+            observer.observe(el);
+        });
+
+        console.log('✅ Landing Page with PayPal Integration Loaded');
+    </script>
+</body>
+</html>
